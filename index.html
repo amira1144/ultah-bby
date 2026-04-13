@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday</title>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+/* HALAMAN 1 */
+.section1 {
+    height: 100vh;
+    background: linear-gradient(135deg, #a1a4c9, #c2c6e9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section1 h1 {
+    font-size: 38px;
+    text-align: center;
+}
+
+.section1 p {
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border-radius: 20px;
+    border: none;
+    background: white;
+    color: #6c70c9;
+    cursor: pointer;
+}
+
+/* HALAMAN 2 */
+.section2 {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* FOTO BESAR */
+.foto img {
+    width: 260px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 25px;
+    margin: 10px;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.foto.show img {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* UCAPAN */
+.ucapan {
+    margin-top: 30px;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s;
+}
+
+.ucapan.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<!-- HALAMAN 1 -->
+<section class="section1">
+    <h1>🎉 Selamat Ulang Tahun bby 🎉</h1>
+    <p>14 / 04 / 2026</p>
+    <button class="btn" onclick="buka()">Let's Celebrate 🎂</button>
+</section>
+
+<!-- HALAMAN 2 -->
+<section class="section2" id="halaman2">
+
+    <div class="foto" id="foto">
+        <img src="foto1.jpeg">
+        <img src="foto2.jpeg">
+    </div>
+
+    <div class="ucapan" id="ucapan">
+        Selamat ulang tahuuun bbyyy 💖🎂 <br><br>
+
+        Hari ini hari spesial, tapi jujur ajaa… setiap hari sejak aku kenal kmm juga selalu terasa spesiaaal 🥺✨ <br><br>
+
+        Terima kasih yaa sudah jadi orang yang selalu bikin aku senyuuum 🤏💕 <br>
+        bbyyy itu kayak rumah buat aku… tempat aku pulaaang, tempat aku ceritaa, tempat aku jadi diri sendiriii 🏡💗 <br><br>
+
+        Semogaa di umur bbyyy yang sekarang, semua hal baik makin deket sama bbyyy, rezekinya lancaaaar, hatinya selalu bahagiaaa, dan tentunya… makin sayaaang sama akuuu 😝💞 <br><br>
+
+        Aku harap kita bisa terus bareng-bareng, lewatin hari-hari dengan tawaaa, dan cinta yang nggak ada habisnyaaa 🤗❤️ <br><br>
+
+        Pokoknyaa… hari ini bbyyy harus bahagiaaa yaaa, karena bbyyy pantas dapetin semuaa hal terbaik di duniaaa 🌎💖 <br><br>
+
+        Selamat ulang tahuuun yaa cintaaa akuuu 🎉🥰 <br>
+        Aku sayaaang bbyyy banyaaak bangettt 💘💘💘
+    </div>
+
+</section>
+
+<audio id="musik" src="musik.mp3"></audio>
+
+<script>
+function buka() {
+    document.getElementById("halaman2").scrollIntoView();
+
+    document.getElementById("musik").play();
+
+    setTimeout(() => {
+        document.getElementById("foto").classList.add("show");
+    }, 300);
+
+    setTimeout(() => {
+        document.getElementById("ucapan").classList.add("show");
+    }, 800);
+}
+</script>
+
+</body>
+</html>
